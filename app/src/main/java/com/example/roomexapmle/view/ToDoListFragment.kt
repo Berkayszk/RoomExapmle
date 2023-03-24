@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.example.roomexapmle.R
 import com.example.roomexapmle.databinding.FragmentToDoListBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ToDoListFragment : Fragment(R.layout.fragment_to_do_list) {
     private var _binding : FragmentToDoListBinding?=null
     private val binding get() = _binding!!

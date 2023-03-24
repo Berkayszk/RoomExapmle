@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.roomexapmle.databinding.ActivityMainBinding
 
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         setUpNavigation()
     }
+    //back button on todolist
     private fun setUpNavigation(){
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentHost) as NavHostFragment
 
@@ -31,5 +33,10 @@ class MainActivity : AppCompatActivity() {
             R.id.toDoListFragment,
             R.id.addToDoFragment
         ))
+    }
+    //back button setOnclick
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp(appBarConfiguration) ||  super.onSupportNavigateUp()
+
     }
 }

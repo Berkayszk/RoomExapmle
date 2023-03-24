@@ -15,7 +15,7 @@ class ToDoListFragment : Fragment(R.layout.fragment_to_do_list) {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentToDoListBinding.inflate(layoutInflater,container,false)
         return binding.root
     }
